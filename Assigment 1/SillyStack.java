@@ -255,13 +255,13 @@ class Stack {
             throw new EmptyStackException();
         }
         else{
-            return head.element;
+            return head.getElement();
         }
     }
 
     public int pop(){
         int returnVal = top();  //throws exception if stack is empty
-        this.head = head.next;
+        head = head.getNext();
         size--;
 
         return returnVal;
@@ -278,16 +278,32 @@ class Stack {
 class Node {
 
     //fields
-    Node next;
-    int element;
+    private Node next;
+    private int element;
 
     //constructors
-    Node(int element){
+    public Node(int element){
         this(element, null);
     }
 
-    Node(int element, Node next){
+    public Node(int element, Node next){
         this.element = element;
+        this.next = next;
+    }
+
+    public int getElement() {
+        return element;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setElement(int element) {
+        this.element = element;
+    }
+
+    public void setNext(Node next) {
         this.next = next;
     }
 }
