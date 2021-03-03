@@ -1,0 +1,60 @@
+
+<!-- saved from url=(0076)https://pages.cpsc.ucalgary.ca/~denzinge/courses/319-winter2021/assign2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CPSC 319, second assignment</title>
+
+<!--<base href="http://www.cpsc.ucalgary.ca/~denzinge/courses/319-winter2021/assign2.html">--><base href=".">
+<link rev="made" href="mailto:denzinge@cpsc.ucalgary.ca%20(Joerg%20Denzinger)">
+</head>
+
+<body>
+<h1> CPSC 319: Data Structures, Algorithms and  their Applications -
+     Second assignment</h1>
+<hr>
+<h3>The problem: an only slightly confused number and symbol sorter</h3>
+<p>
+The task your system has to perform is to sort a given list of natural numbers
+and symbols in descending order. In addition to the usual ordering on
+natural numbers, we have the following requirements on how the symbols
+are integrated:
+</p><ul>
+<li> 0 &lt; Do &lt; 1
+</li><li> 100 &lt; Re &lt; 101
+</li><li> 1000 &lt; Mi &lt; 1001
+</li><li> 3 &lt; &amp; &lt; 4
+</li><li> 3 &lt; @ &lt; &amp;
+</li><li> 1005000 &lt; % &lt; 1005001
+</li><li> 55 &lt; Asymbolwithareallylongname &lt; 56
+</li><li> 20 &lt; $ &lt; 21
+</li><li> 15 &lt; Fa &lt; 16
+</li><li> 103 &lt; One &lt; 104
+</li><li> One &lt; Three &lt; 104
+</li><li> One &lt; Two &lt; Three
+</li></ul>
+<p></p>
+<p>
+If the given list contains any number of 666, then the result list should be sorted 
+in ascending order, without any occurences of 666, but with one @ added
+(even if the list already contains @s).
+</p>
+<h3>Input file</h3>
+<p>
+In an input file the given list for your system will be given by a line for 
+each of the numbers/symbols in the list.
+</p>
+<h3>Output file</h3>
+<p>
+In the output file, you output the result list one number/symbol in 
+its own line in the required order.
+If during reading of the input list, your system encounters an input that
+is not a natural number or one of the symbols given above, it has to
+output:<br>
+Input error.<br>
+and terminate.
+Regarding blanks and empty lines, the same requirements as in assignment
+1 have to be fulfilled.
+</p>
+
+
+
+</body></html>
