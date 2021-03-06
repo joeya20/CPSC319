@@ -1,7 +1,6 @@
 import java.io.*;
 
 public class SillySorter{
-    private static boolean firstLine = true;
     public static void main(String[] args) throws IOException {
         String inputFilePath = args[0];
         String outputFilePath = args[1];
@@ -25,8 +24,10 @@ public class SillySorter{
             //1. add elements
             while ((line = reader.readLine()) != null){    //read until eof
                 if(line == "666"){
-                    ascending = true;
-                    myList.add("@");
+                    if(!ascending){
+                        ascending = true;
+                        myList.add("@");
+                    }
                 }
                 else if(checkLine(line)){
                     myList.add(line);
