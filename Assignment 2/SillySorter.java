@@ -47,14 +47,14 @@ public class SillySorter{
                             myList.add(getSymbolCode("@"));
                         }
                     }
-                    else{
+                    else {
                         myList.add(Double.parseDouble(line));
                     }
                 }
                 else if(isSymbol(line)) {
                     myList.add(getSymbolCode(line));
                 }
-                else{
+                else {
                     writer.write("Input error.");
                     return;
                 }
@@ -98,14 +98,14 @@ public class SillySorter{
         for(int i = 0; i < listToPrint.length(); i++) {
             if(i != 0) {
                 writer.newLine();
-            }            
+            }
             
             double output = listToPrint.get(i);
             if(isCodedSymbol(output)) {   //if the value is the encoded value of a symbol, output the symbol
                 writer.write(getSymbol(output));
             }
-            else{
-                writer.write(String.valueOf((int)output));
+            else {
+                writer.write(String.valueOf((long)output));
             }
         }
     }
@@ -116,7 +116,7 @@ public class SillySorter{
      * @return true if value of string is a natural number
      */
     private static boolean isNaturalNumber(String line) {
-        try{
+        try {
             long elementVal = Long.parseLong(line); //convert into int, throws exception if not an integer
 
             if((String.valueOf(elementVal).length() != line.length()) || (elementVal < 0)) { //if contains leading zeros or is negative
@@ -151,7 +151,7 @@ public class SillySorter{
         line.equals("Two") || line.equals("Three")) {
             return true;
         }
-        else{
+        else {
             return false;
         }
     }
@@ -198,7 +198,7 @@ public class SillySorter{
         else if(line.equals("Three")) {
             return 103.3;
         }
-        else{
+        else {
             throw new IllegalArgumentException();
         }
     }
@@ -245,7 +245,7 @@ public class SillySorter{
         else if(value == 103.3) {
             return "Three";
         }
-        else{
+        else {
             throw new IllegalArgumentException();
         }
     }
@@ -306,7 +306,7 @@ class List{
     }
 
     /**
-    * reverses the list - O(n) time complexity
+    * reverses the list; O(n) time complexity
     */
     public void reverse() {
         for(int i = 0; i < length/2; i++) {
